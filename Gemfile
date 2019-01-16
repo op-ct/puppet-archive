@@ -25,6 +25,7 @@ group :test do
   gem 'rubocop', '~> 0.49.1',                                       :require => false if RUBY_VERSION >= '2.3.0'
   gem 'rubocop-rspec', '~> 1.15.0',                                 :require => false if RUBY_VERSION >= '2.3.0'
   gem 'mocha', '~> 1.4.0',                                          :require => false
+  gem 'webmock'
   gem 'coveralls',                                                  :require => false
   gem 'simplecov-console',                                          :require => false
   gem 'rack', '~> 1.0',                                             :require => false if RUBY_VERSION < '2.2.2'
@@ -36,6 +37,7 @@ group :development do
   gem 'travis-lint',              :require => false
   gem 'guard-rake',               :require => false
   gem 'overcommit', '>= 0.39.1',  :require => false
+  gem 'pry', :require => false
 end
 
 group :system_tests do
