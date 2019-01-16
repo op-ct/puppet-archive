@@ -1,5 +1,4 @@
 require 'json'
-require 'puppet_x/bodeco/util'
 
 Puppet::Functions.create_function(:'archive::artifactory_uri_from_checksum') do
   # @summary A function that returns the checksum value of an artifact stored in Artifactory
@@ -33,8 +32,10 @@ Puppet::Functions.create_function(:'archive::artifactory_uri_from_checksum') do
     #   - [x] SSL
     # - [x] token in header
     # - [x] special post body in AQL
-    # - [ ] parse JSON
-    # - [ ] return just URI
+    # - [x] parse JSON
+    # - [x] return just URI
+    # - [ ] test connect failures
+    # - [ ] validate URI response
 
     opts = {
       headers: { 'Authorization' => "Bearer #{bearer_token}" },
